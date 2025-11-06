@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas Pancasila - Era Digital</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #ff416c, #ff4b2b);
+      color: white;
+      overflow: hidden;
+    }
+
+    .slide-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .slide {
+      position: absolute;
+      width: 85%;
+      max-width: 900px;
+      height: 75%;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(15px);
+      color: #fff;
+      border-radius: 25px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+      padding: 40px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+      text-align: center;
+      overflow-y: auto;
+    }
+
+    .slide.active {
+      opacity: 1;
+      transform: translateY(0);
+      z-index: 1;
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 32px;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      color: #ffe1e9;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #fefefe;
+      line-height: 1.6;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      line-height: 1.8;
+      text-align: left;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    li::before {
+      content: "🌸 ";
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .nav-buttons {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 40px;
+    }
+
+    button {
+      background: linear-gradient(90deg, #ff416c, #ff4b2b);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(255, 65, 108, 0.6);
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 25px rgba(255, 65, 108, 0.8);
+    }
+
+    button:disabled {
+      background: gray;
+      box-shadow: none;
+      transform: none;
+      cursor: default;
+    }
+
+    .logo {
+      width: 90px;
+      height: auto;
+      margin-bottom: 15px;
+      border-radius: 50%;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+
+    .ref {
+      font-size: 14px;
+      color: #ffe1e9;
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    /* ✅ Responsif untuk layar kecil (HP) */
+    @media (max-width: 768px) {
+      .slide {
+        width: 95%;
+        height: 85%;
+        padding: 25px 20px;
+        border-radius: 20px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      ul {
+        font-size: 15px;
+      }
+
+      .nav-buttons {
+        padding: 0 20px;
+        bottom: 15px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+
+      .logo {
+        width: 70px;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slide-container">
+    <div class="slide active" id="slide1">
+      <img src="https://cdn-icons-png.flaticon.com/512/2920/2920321.png" class="logo" alt="Pendidikan Icon">
+      <h1>Tugas Pancasila</h1>
+      <h2>Kasus Pelanggaran Nilai di Era Digital</h2>
+      <p>Disusun oleh: <b>Willy Randika Wardhoyo</b><br>Program Studi: <b>Teknik Informatika</b></p>
+    </div>
+
+    <div class="slide" id="slide2">
+      <h1>📱 Contoh Kasus</h1>
+      <p><b>Hoaks mengenai isu SARA di media sosial</b> yang menyebarkan kebencian dan memicu perpecahan antar kelompok masyarakat.</p>
+      <p><b>Apa itu SARA?</b><br>
+        SARA merupakan singkatan dari <b>Suku, Agama, Ras, dan Antargolongan</b>.  
+        Isu SARA sering dimanfaatkan untuk menyebarkan kebencian dan memecah belah persatuan bangsa melalui media sosial.</p>
+      <p>Fenomena ini menunjukkan rendahnya literasi digital serta kurangnya penerapan nilai-nilai Pancasila dalam ruang maya.</p>
+    </div>
+
+    <div class="slide" id="slide3">
+      <h1>⚖️ Sila yang Dilanggar</h1>
+      <ul>
+        <li><b>Sila ke-3 – Persatuan Indonesia:</b> Hoaks SARA memecah belah dan mengancam keutuhan bangsa.</li>
+        <li><b>Sila ke-2 – Kemanusiaan yang Adil dan Beradab:</b> Hoaks berisi fitnah dan kebencian yang tidak menghargai sesama.</li>
+      </ul>
+    </div>
+
+    <div class="slide" id="slide4">
+      <h1>📚 Landasan Teori</h1>
+      <p>
+        Menurut <b>Notonagoro (1975)</b>, Pancasila merupakan dasar filsafat negara yang menjadi pedoman hidup bangsa Indonesia.
+        Dalam konteks era digital, Pancasila berfungsi sebagai <i>etika moral</i> untuk menuntun perilaku warga negara
+        agar bijak dalam penggunaan teknologi informasi.
+      </p>
+      <p>
+        Oleh karena itu, penguatan nilai Pancasila perlu dilakukan melalui pendidikan karakter dan literasi digital yang berkelanjutan.
+      </p>
+    </div>
+
+    <div class="slide" id="slide5">
+      <h1>🌿 Cara Menerapkan Nilai Pancasila</h1>
+      <ul>
+        <li>Memeriksa fakta sebelum menyebarkan informasi.</li>
+        <li>Melaporkan akun atau konten penyebar hoaks.</li>
+        <li>Menjaga etika dan sopan santun di dunia maya.</li>
+        <li>Menanamkan semangat persatuan dalam setiap aktivitas digital.</li>
+      </ul>
+    </div>
+
+    <div class="slide" id="slide6">
+      <h1>💡 Kesimpulan</h1>
+      <p>
+        Hoaks di era digital tidak hanya melanggar etika sosial, tetapi juga menyalahi nilai-nilai Pancasila.
+        Dengan menanamkan nilai <b>Kemanusiaan</b> dan <b>Persatuan Indonesia</b>,
+        masyarakat dapat menciptakan ruang digital yang lebih damai dan bermartabat.
+      </p>
+      <div class="ref">
+        <p><b>Referensi:</b></p>
+        <p>
+          - Notonagoro. (1975). *Pancasila: Dasar Falsafah Negara Republik Indonesia.*<br>
+          - Kementerian Kominfo (2024). *Literasi Digital dan Pencegahan Hoaks di Indonesia.*<br>
+          - BPIP (2023). *Nilai-Nilai Pancasila dalam Era Transformasi Digital.*
+        </p>
+      </div>
+    </div>
+
+    <div class="slide" id="slide7">
+      <h1>🙏 Sekian, Terima Kasih!</h1>
+      <p>Semoga kita semua selalu mengamalkan nilai-nilai Pancasila  
+      untuk menjaga persatuan dan kedamaian Indonesia 🇮🇩</p>
+    </div>
+
+    <div class="nav-buttons">
+      <button id="prevBtn">← Sebelumnya</button>
+      <button id="nextBtn">Berikutnya →</button>
+    </div>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+
+      prevBtn.disabled = index === 0;
+
+      if (index === slides.length - 1) {
+        nextBtn.textContent = "Sekian, Terima Kasih 🙏";
+        nextBtn.disabled = true;
+      } else {
+        nextBtn.textContent = "Berikutnya →";
+        nextBtn.disabled = false;
+      }
+    }
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      if (currentSlide < slides.length - 1) {
+        currentSlide++;
+        showSlide(currentSlide);
+      }
+    });
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      if (currentSlide > 0) {
+        currentSlide--;
+        showSlide(currentSlide);
+      }
+    });
+  </script>
+</body>
+</html>
